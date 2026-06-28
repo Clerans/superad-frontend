@@ -1,6 +1,7 @@
 import { Project, ProjectImage, AdminUser } from '@/types/portfolio';
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+const BASE_URL =
+  (import.meta.env.VITE_API_URL || "http://localhost:3001") + "/api";
 
 function getAuthHeader(): Record<string, string> {
   const token = localStorage.getItem('admin_token');
